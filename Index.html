@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="cs.css">
+<title>VideoStream - Your Video Platform</title>
+<style>
+
+    /*  adddd */
+ /* CSS for the ad popup */
+        .ad-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .ad-popup {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        .ad-popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        .ad-images {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            gap: 15px;
+        }
+
+        .ad-image {
+            width: 45%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: blink 2s infinite;
+            user-select: none;
+            -webkit-user-drag: none;
+            pointer-events: none;
+        }
+
+        .ad-image:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .ad-popup p {
+            color: #666;
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .close-btn {
+            background: #ff4757;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .close-btn:hover {
+            background: #ff3742;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* Prevent text selection and image dragging */
+        .ad-popup {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+    /* addddd */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:Arial,sans-serif;
+  background:#0f0f0f;
+  color:white;
+  padding:5px;
+}
+.container{max-width:1200px;margin:0 auto;}
+
+/* Header */
+.header{
+  display:fixed;
+  z-index: index 1;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:30px;
+  padding:15px 0;
+  border-bottom:1px solid #333;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:24px;
+  font-weight:bold;
+  color:#ff0000;
+}
+.logo-icon{
+  width:40px;
+  height:40px;
+  background:#ff0000;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.logo-icon::before{content:'▶';color:white;margin-left:2px;}
+
+/* Video Grid */
+.videos-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:20px;
+}
+.video-card{
+  background:#1f1f1f;
+  border-radius:12px;
+  overflow:hidden;
+  transition:transform .3s;
+  cursor:pointer;
+}
+.video-card:hover{transform:translateY(-5px);}
+.thumbnail{width:100%;height:180px;object-fit:cover;}
+.video-info{padding:15px;}
+.video-title{font-size:16px;font-weight:bold;margin-bottom:8px;line-height:1.4;}
+.video-meta{color:#888;font-size:14px;}
+
+/* Video Player */
+.video-player{
+  width:100%;
+  max-width:600px;
+  margin-top:60px;
+  margin:20px auto;
+  background:#ff0202;
+  border-radius:0px;
+  overflow:hidden;
+  display:none;
+}
+.video-player iframe{
+  width:100%;
+  height:300px;
+  border:none;
+  
+}
+
+/* Show More Button */
+.show-more{
+  text-align:center;
+  margin-top:20px;
+}
+.show-more button{
+  background:#ff0000;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .videos-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+  .thumbnail{height:140px;}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <div class="logo-icon"></div>
+      <span><h4 align="center">THARKI HUM</h4></span>
+    </div>
+  </div>
+    <a href="https://duadawai.com/men-wellness" >
+  <div class="add"><video src="image/adv.mp4" alt=""  autoplay loop  style="width: 100%; "></video>
+    <marquee behavior="slice" direction="" style="display: fixed; background-color: red; color: black; text-decoration: none;
+    font-size: 35px ; height: 40px;"><b>Timing kre 30 minutes Ling Ki fullpower </b></marquee>  </a> 
+  </div>
+<hr size="5px white" style="margin-bottom: 20px;">
+  <!-- Video Player -->
+  <div class="video-player" id="videoPlayer">
+    <iframe id="mainVideo" allowfullscreen></iframe>
+  </div>
+
+  <!-- Videos Grid -->
+  <div class="videos-grid" id="videosGrid"></div>
+
+  <!-- Show More Button -->
+  <div class="show-more" id="showMoreContainer">
+    <button onclick="showMore()">Show More</button>
+  </div>
+</div>
+ 
+  <div id="adPopup" class="ad-popup-overlay" style="display: none; text-decoration: none;">
+        <div class="ad-popup">
+         <a href="https://duadawai.com/men-wellness" > <video src="video/Add.mp4"  autoplay loop style="width: 100%;"></video>
+            <!-- <h2>Special Offer!</h2>
+            <div class="ad-images">
+                <img src="image/12.jpeg" alt="Special Offer 1" class="ad-image">
+                
+            <p><span class="he">Lund </span>ko mota or Tagda kre</span> <br>
+            Apne Sex Timing ko kre 30 minutes se jyda </p> --></a>
+            <button class="close-btn" onclick="closeAd()">Close</button>
+        </div>
+    </div>
+    
+
+<script>
+const demoVideos=[
+ 
+  {title:"Sexy Girlfriend with big boobs ",thumbnail:"image/1.jpeg",videoUrl:"https://drive.google.com/file/d/1YoT5DWEIozqgzCg7AgW9YbKdtrHRuC-o/view?usp=drive_link"},
+  {title:"Padosan sexy bhabhi ",thumbnail:"image/2.jpeg",videoUrl:"video/2.mp4"},
+  {title:"New Marrid Cupple Romantic ",thumbnail:"image/3.jpeg",videoUrl:"video/3.mp4"},
+  {title:"2000 Wali ",thumbnail:"image/4.jpeg",videoUrl:"video/4.mp4"},
+  {title:"Noughty Dever Bhabhi",thumbnail:"image/5.jpeg",videoUrl:"video/5.mp4"},
+  {title:"CUTE GIRlFRIEND WITH MOMMY FIGURE ",thumbnail:"image/6.jpeg",videoUrl:"video/6.mp4"},
+  {title:"BHABAI KI GARMI ",thumbnail:"image/7.jpeg",videoUrl:"video/7.mp4"},
+  {title:"UNSHADISHFIED WIFE ",thumbnail:"image/8.jpeg",videoUrl:"video/8.mp4"},
+  {title:"Hawashi Chachi ",thumbnail:"image/9.jpeg",videoUrl:"video/9.mp4"},
+  {title:"Chuddo Ma Beti ",thumbnail:"image/10.jpeg",videoUrl:"video/10.mp4"},
+  {title:"Sexy Girlfriend Outdoor Sex ",thumbnail:"image/11.jpeg",videoUrl:"video/11.mp4"},
+  {title:"Susral Simar ka MMS x video ",thumbnail:"image/12.jpeg",videoUrl:"video/12.mp4"},
+  {title:"Sexy Girlfriend with big boobs ",thumbnail:"image/1.jpeg",videoUrl:"video/1.mp4"},
+  {title:"Padosan sexy bhabhi ",thumbnail:"image/2.jpeg",videoUrl:"video/2.mp4"},
+  {title:"New Marrid Cupple Romantic ",thumbnail:"image/3.jpeg",videoUrl:"video/3.mp4"},
+  {title:"2000 Wali ",thumbnail:"image/4.jpeg",videoUrl:"video/4.mp4"},
+  {title:"Noughty Dever Bhabhi",thumbnail:"image/5.jpeg",videoUrl:"video/5.mp4"},
+  {title:"CUTE GIRlFRIEND WITH MOMMY FIGURE ",thumbnail:"image/6.jpeg",videoUrl:"video/6.mp4"},
+  {title:"BHABAI KI GARMI ",thumbnail:"image/7.jpeg",videoUrl:"video/7.mp4"},
+  {title:"UNSHADISHFIED WIFE ",thumbnail:"image/8.jpeg",videoUrl:"video/8.mp4"},
+  {title:"Hawashi Chachi ",thumbnail:"image/9.jpeg",videoUrl:"video/9.mp4"},
+  {title:"Chuddo Ma Beti ",thumbnail:"image/10.jpeg",videoUrl:"video/10.mp4"},
+  {title:"Sexy Girlfriend Outdoor Sex ",thumbnail:"image/11.jpeg",videoUrl:"video/11.mp4"},
+  {title:"Susral Simar ka MMS x video ",thumbnail:"image/12.jpeg",videoUrl:"video/12.mp4"},
+  {title:"Sexy Girlfriend with big boobs ",thumbnail:"image/1.jpeg",videoUrl:"video/1.mp4"},
+  {title:"Padosan sexy bhabhi ",thumbnail:"image/2.jpeg",videoUrl:"video/2.mp4"},
+  {title:"New Marrid Cupple Romantic ",thumbnail:"image/3.jpeg",videoUrl:"video/3.mp4"},
+  {title:"2000 Wali ",thumbnail:"image/4.jpeg",videoUrl:"video/4.mp4"},
+  {title:"Noughty Dever Bhabhi",thumbnail:"image/5.jpeg",videoUrl:"video/5.mp4"},
+  {title:"CUTE GIRlFRIEND WITH MOMMY FIGURE ",thumbnail:"image/6.jpeg",videoUrl:"video/6.mp4"},
+  {title:"BHABAI KI GARMI ",thumbnail:"image/7.jpeg",videoUrl:"video/7.mp4"},
+  {title:"UNSHADISHFIED WIFE ",thumbnail:"image/8.jpeg",videoUrl:"video/8.mp4"},
+  {title:"Hawashi Chachi ",thumbnail:"image/9.jpeg",videoUrl:"video/9.mp4"},
+  {title:"Chuddo Ma Beti ",thumbnail:"image/10.jpeg",videoUrl:"video/10.mp4"},
+  {title:"Sexy Girlfriend Outdoor Sex ",thumbnail:"image/11.jpeg",videoUrl:"video/11.mp4"},
+  {title:"Susral Simar ka MMS x video ",thumbnail:"image/12.jpeg",videoUrl:"video/12.mp4"},
+ 
+ 
+ 
+ 
+ 
+];
+
+let shownCount=8;
+
+window.onload=function(){
+  loadVideos();
+};
+
+function loadVideos(){
+  const grid=document.getElementById("videosGrid");
+  grid.innerHTML="";
+  demoVideos.slice(0,shownCount).forEach(v=>{
+    const videoCard=`
+      <div class="video-card" onclick="playVideo('${v.videoUrl}')">
+        <img src="${v.thumbnail}" alt="${v.title}" class="thumbnail">
+        <div class="video-info">
+          <div class="video-title">${v.title}</div>
+          <div class="video-meta"> <b> CLICK TO PLAY </b> </div>
+        </div>
+      </div>`;
+    grid.innerHTML+=videoCard;
+  });
+
+  // Hide button if all shown
+  if(shownCount>=demoVideos.length){
+    document.getElementById("showMoreContainer").style.display="none";
+  }
+}
+
+function showMore(){
+  shownCount=demoVideos.length;
+  loadVideos();
+}
+
+function playVideo(videoUrl){
+  const player=document.getElementById("videoPlayer");
+  const iframe=document.getElementById("mainVideo");
+  iframe.src=videoUrl;
+  player.style.display="block";
+  player.scrollIntoView({behavior:"smooth"});
+}
+</script>
+<!-- adddd -->
+<script >
+ // JavaScript to control the ad popup
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show the ad popup after a short delay (simulating website load)
+            setTimeout(function() {
+                document.getElementById('adPopup').style.display = 'flex';
+            }, 1000);
+        });
+
+        function closeAd() {
+            document.getElementById('adPopup').style.display = 'none';
+        }
+
+        // Close the ad when clicking outside of it
+        document.getElementById('adPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeAd();
+            }
+        });
+
+        // Prevent right-click context menu on images
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.classList.contains('ad-image')) {
+                e.preventDefault();
+            }
+        });
+</script>
+</body>
+<script>
+  
+</script>
+</html>
