@@ -155,7 +155,9 @@ body{
 .logo-icon::before{content:'▶';color:white;margin-left:2px;}
 
 /* Video Grid */
+    
 .videos-grid{
+  margin-bottom: 120px;
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
   gap:20px;
@@ -198,6 +200,7 @@ body{
 }
 .show-more button{
   background:#ff0000;
+  margin-bottom: 150px;
   color:white;
   border:none;
   padding:10px 20px;
@@ -226,9 +229,24 @@ body{
     </div>
   </div>
     <a href="https://duadawai.com/men-wellness" >
-  <div class="add"><video src="image/adv.mp4" alt=""  autoplay loop  style="width: 100%; "></video>
-    <marquee behavior="slice" direction="" style="display: fixed; background-color: red; color: black; text-decoration: none;
-    font-size: 35px ; height: 40px;"><b>Timing kre 30 minutes Ling Ki fullpower </b></marquee>  </a> 
+  <div class="add"><video src="adv.mp4" alt=""  autoplay loop muted playsinline  style="width: 100%; "></video>
+  <!-- <p  align="center" class="blink">⚡ Timing kre 30 minutes Ling Ki Full Power ⚡</p> -->
+   
+   
+<style> .blink {
+       width: 100%;
+      color: red;
+      font-size: 35px;
+      font-weight: bold;
+      animation: blinkText 1s infinite; /* 1 second ke interval pe blink karega */
+    }
+
+    @keyframes blinkText {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }</style>
+    <video src="13.mp4" alt="" autoplay loop muted playsinline  style="width: 100%; "></video> </a>
   </div>
 <hr size="5px white" style="margin-bottom: 20px;">
   <!-- Video Player -->
@@ -247,7 +265,7 @@ body{
  
   <div id="adPopup" class="ad-popup-overlay" style="display: none; text-decoration: none;">
         <div class="ad-popup">
-         <a href="https://duadawai.com/men-wellness" > <video src="video/Add.mp4"  autoplay loop style="width: 100%;"></video>
+         <a href="https://duadawai.com/men-wellness" > <video src="Add.mp4"  autoplay loop muted playsinline style="width: 100%;"></video>
             <!-- <h2>Special Offer!</h2>
             <div class="ad-images">
                 <img src="image/12.jpeg" alt="Special Offer 1" class="ad-image">
@@ -262,42 +280,26 @@ body{
 <script>
 const demoVideos=[
  
-  {title:"Sexy Girlfriend with big boobs ",thumbnail:"image/1.jpeg",videoUrl:"https://drive.google.com/file/d/1YoT5DWEIozqgzCg7AgW9YbKdtrHRuC-o/view?usp=drive_link"},
-  {title:"Padosan sexy bhabhi ",thumbnail:"image/2.jpeg",videoUrl:"video/2.mp4"},
-  {title:"New Marrid Cupple Romantic ",thumbnail:"image/3.jpeg",videoUrl:"video/3.mp4"},
-  {title:"2000 Wali ",thumbnail:"image/4.jpeg",videoUrl:"video/4.mp4"},
-  {title:"Noughty Dever Bhabhi",thumbnail:"image/5.jpeg",videoUrl:"video/5.mp4"},
-  {title:"CUTE GIRlFRIEND WITH MOMMY FIGURE ",thumbnail:"image/6.jpeg",videoUrl:"video/6.mp4"},
-  {title:"BHABAI KI GARMI ",thumbnail:"image/7.jpeg",videoUrl:"video/7.mp4"},
-  {title:"UNSHADISHFIED WIFE ",thumbnail:"image/8.jpeg",videoUrl:"video/8.mp4"},
-  {title:"Hawashi Chachi ",thumbnail:"image/9.jpeg",videoUrl:"video/9.mp4"},
-  {title:"Chuddo Ma Beti ",thumbnail:"image/10.jpeg",videoUrl:"video/10.mp4"},
-  {title:"Sexy Girlfriend Outdoor Sex ",thumbnail:"image/11.jpeg",videoUrl:"video/11.mp4"},
-  {title:"Susral Simar ka MMS x video ",thumbnail:"image/12.jpeg",videoUrl:"video/12.mp4"},
-  {title:"Sexy Girlfriend with big boobs ",thumbnail:"image/1.jpeg",videoUrl:"video/1.mp4"},
-  {title:"Padosan sexy bhabhi ",thumbnail:"image/2.jpeg",videoUrl:"video/2.mp4"},
-  {title:"New Marrid Cupple Romantic ",thumbnail:"image/3.jpeg",videoUrl:"video/3.mp4"},
-  {title:"2000 Wali ",thumbnail:"image/4.jpeg",videoUrl:"video/4.mp4"},
-  {title:"Noughty Dever Bhabhi",thumbnail:"image/5.jpeg",videoUrl:"video/5.mp4"},
-  {title:"CUTE GIRlFRIEND WITH MOMMY FIGURE ",thumbnail:"image/6.jpeg",videoUrl:"video/6.mp4"},
-  {title:"BHABAI KI GARMI ",thumbnail:"image/7.jpeg",videoUrl:"video/7.mp4"},
-  {title:"UNSHADISHFIED WIFE ",thumbnail:"image/8.jpeg",videoUrl:"video/8.mp4"},
-  {title:"Hawashi Chachi ",thumbnail:"image/9.jpeg",videoUrl:"video/9.mp4"},
-  {title:"Chuddo Ma Beti ",thumbnail:"image/10.jpeg",videoUrl:"video/10.mp4"},
-  {title:"Sexy Girlfriend Outdoor Sex ",thumbnail:"image/11.jpeg",videoUrl:"video/11.mp4"},
-  {title:"Susral Simar ka MMS x video ",thumbnail:"image/12.jpeg",videoUrl:"video/12.mp4"},
-  {title:"Sexy Girlfriend with big boobs ",thumbnail:"image/1.jpeg",videoUrl:"video/1.mp4"},
-  {title:"Padosan sexy bhabhi ",thumbnail:"image/2.jpeg",videoUrl:"video/2.mp4"},
-  {title:"New Marrid Cupple Romantic ",thumbnail:"image/3.jpeg",videoUrl:"video/3.mp4"},
-  {title:"2000 Wali ",thumbnail:"image/4.jpeg",videoUrl:"video/4.mp4"},
-  {title:"Noughty Dever Bhabhi",thumbnail:"image/5.jpeg",videoUrl:"video/5.mp4"},
-  {title:"CUTE GIRlFRIEND WITH MOMMY FIGURE ",thumbnail:"image/6.jpeg",videoUrl:"video/6.mp4"},
-  {title:"BHABAI KI GARMI ",thumbnail:"image/7.jpeg",videoUrl:"video/7.mp4"},
-  {title:"UNSHADISHFIED WIFE ",thumbnail:"image/8.jpeg",videoUrl:"video/8.mp4"},
-  {title:"Hawashi Chachi ",thumbnail:"image/9.jpeg",videoUrl:"video/9.mp4"},
-  {title:"Chuddo Ma Beti ",thumbnail:"image/10.jpeg",videoUrl:"video/10.mp4"},
-  {title:"Sexy Girlfriend Outdoor Sex ",thumbnail:"image/11.jpeg",videoUrl:"video/11.mp4"},
-  {title:"Susral Simar ka MMS x video ",thumbnail:"image/12.jpeg",videoUrl:"video/12.mp4"},
+  {title:"Sexy Girlfriend with big boobs ",thumbnail:"image/1.jpg",videoUrl:"1.mp4"},
+  {title:"Padosan sexy bhabhi ",thumbnail:"image/2.jpeg",videoUrl:"2.mp4"},
+  {title:"New Marrid Cupple Romantic ",thumbnail:"image/3.jpg",videoUrl:"3.mp4"},
+  {title:"2000 Wali ",thumbnail:"image/4.jpg",videoUrl:"4.mp4"},
+  {title:"Noughty Dever Bhabhi",thumbnail:"image/5.jpg",videoUrl:"5.mp4"},
+  {title:"CUTE GIRlFRIEND WITH MOMMY FIGURE ",thumbnail:"image/6.jpg",videoUrl:"6.mp4"},
+  {title:"BHABAI KI GARMI ",thumbnail:"image/7.jpg",videoUrl:"7.mp4"},
+  {title:"UNSHADISHFIED WIFE ",thumbnail:"image/8.jpg",videoUrl:"8.mp4"},
+  {title:"Hawashi Chachi ",thumbnail:"image/9.jpg",videoUrl:"9.mp4"},
+  {title:"Chuddo Ma Beti ",thumbnail:"image/10.jpg",videoUrl:"10.mp4"},
+  {title:"Sexy Girlfriend Outdoor Sex ",thumbnail:"image/11.jpg",videoUrl:"11.mp4"},
+  {title:"Susral Simar ka MMS x video ",thumbnail:"image/12.jpeg",videoUrl:"12.mp4"},
+ {title:"Sexy Girlfriend with big boobs ",thumbnail:"image/13.jpg",videoUrl:"13.mp4"},
+  {title:"Padosan sexy bhabhi ",thumbnail:"image/14.jpg",videoUrl:"14.mp4"},
+  {title:"New Marrid Cupple Romantic ",thumbnail:"image/15.jpg",videoUrl:"15.mp4"},
+  {title:"2000 Wali ",thumbnail:"image/16.jpg",videoUrl:"16.mp4"},
+  {title:"Noughty Dever Bhabhi",thumbnail:"image/17.jpeg",videoUrl:"17.mp4"},
+  {title:"CUTE GIRlFRIEND WITH MOMMY FIGURE ",thumbnail:"image/18.jpeg",videoUrl:"18.mp4"},
+ 
+
  
  
  
@@ -374,7 +376,48 @@ function playVideo(videoUrl){
         });
 </script>
 </body>
+    <style>
+  @media only screen and (max-width: 768px) {
+    .mobile-footer {
+      position: fixed;
+      display: flex;
+      /* justify-content: center; */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      font-size: 16px;
+      z-index: 2; /* 2nd layer */
+    }
+  }
+</style>
+
+<a href="https://duadawai.com/men-wellness"> <div class="mobile-footer"><video src="13.mp4"  autoplay loop muted playsinline style="width:100%">
+</video>
+  
+</div></a>
 <script>
   
 </script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
