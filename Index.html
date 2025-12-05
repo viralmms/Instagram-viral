@@ -1,126 +1,171 @@
-const demoVideos = [
-    { title: " DESI GIRL MMS VIDEO ", thumbnail: "18888888.jpg", videoUrl: "0 (1).mp4" },
-    { title: " Sexy bhabi ", thumbnail: "28888888.jpg", videoUrl: "0 (2).mp4" },
-    { title: " Sexy Shy Girlfriend ", thumbnail: "38888888.jpg", videoUrl: "0 (3).mp4" },
-    { title: " MIA KHAIFA X VIDEO ", thumbnail: "48888888.jpg", videoUrl: "0 (4).mp4" },
-    { title: " Pink Pussy (Hard CORE ) ", thumbnail: "58888888.jpg", videoUrl: "0 (5).mp4" },
-    { title: " 10TH ROUND X VIDEO ", thumbnail: "68888888.jpg", videoUrl: "0 (6).mp4" },
-    { title: " Sexy girl With Cheat Haswand ", thumbnail: "78888888.jpg", videoUrl: "0 (7).mp4" },
-    { title: " BIG DICK HARD CORE SEX ", thumbnail: "88888888.jpg", videoUrl: "0 (8).mp4" },
-    { title: " VIRAL MMS INSTAGRAM GIRL ", thumbnail: "98888888.jpg", videoUrl: "0 (9).mp4" },
-    { title: " 1 Sexy Girlfriend in homemade sex", thumbnail: "image/1.jpg", videoUrl: "1.mp4" },
-    { title: " 2 Padosan sexy bhabhi ", thumbnail: "image/2.jpeg", videoUrl: "35.mp4" },
-    { title: " 3  BloW Job girlfriend mms  ", thumbnail: "image/3.jpg", videoUrl: "3.mp4" },
-    { title: " 4  Instagram viral mms bobs press", thumbnail: "image/4.jpg", videoUrl: "4.mp4" },
-    { title: " 5 Noughty Dever Bhabhi MMS", thumbnail: "image/5.jpg", videoUrl: "5.mp4" },
-    { title: " 6  MMS Blow Job Girl", thumbnail: "image/6.jpg", videoUrl: "6.mp4" },
-    { title: " 7 Cute girl MMS deso BOBS", thumbnail: "image/7.jpg", videoUrl: "7.mp4" },
-    { title: " 8  Fingring sexy girl", thumbnail: "image/8.jpg", videoUrl: "8.mp4" },
-    { title: " 9 Blank vid", thumbnail: "image/9.jpg", videoUrl: "32.mp4" },
-    { title: " 10  MMS Collage Girlfriend  ", thumbnail: "image/10.jpg", videoUrl: "10.mp4" },
-    { title: " 11 Padosan MMS X VIDEO ", thumbnail: "image/11.jpg", videoUrl: "41.mp4" },
-    { title: " 12  Cute Girl Fingring   ", thumbnail: "image/12.jpeg", videoUrl: "12.mp4" },
-    { title: " 13 ADD ", thumbnail: "image/11.jpg", videoUrl: "13.mp4" },
-    { title: " 14  Romantic Girlfriend MMS ", thumbnail: "image/14.jpg", videoUrl: "14.mp4" },
-    { title: " 15 Desi GirlFriend Blow Job  ", thumbnail: "image/15.jpg", videoUrl: "15.mp4" },
-    { title: " 16 TEEN GIRL DESI MMS ", thumbnail: "image/16.jpg", videoUrl: "16.mp4" },
-    { title: " 17 Aunty Viral MMS ", thumbnail: "image/12.jpeg", videoUrl: "17.mp4" },
-    { title: " 18 not set  ", thumbnail: "image/18.jpg", videoUrl: "18.mp4" },
-    { title: " 19 not set   ", thumbnail: "image/1.jpg", videoUrl: "20.mp4" },
-    { title: " 20 not set  ", thumbnail: "image/1.jpg", videoUrl: "21.mp4" },
-    { title: " 21 not set   ", thumbnail: "21.jpeg", videoUrl: "22.mp4" },
-    { title: " 21 Yellow Suit Girl mms ", thumbnail: "image/1.jpg", videoUrl: "23.mp4" },
-    { title: " 23 Sexy Girlfriend with big boobs ", thumbnail: "23.jpeg", videoUrl: "24.mp4" },
-    { title: " 24 Sexy Girlfriend with big boobs ", thumbnail: "24.jpeg", videoUrl: "25.mp4" },
-    { title: " 25 Sexy Girlfriend with big boobs ", thumbnail: "25.jpeg", videoUrl: "26.mp4" },
-    { title: " 26 Sexy Girlfriend with big boobs ", thumbnail: "26.jpeg", videoUrl: "27.mp4" },
-    { title: " 27 Sexy Girlfriend with big boobs ", thumbnail: "27.jpeg", videoUrl: "28.mp4" },
-    { title: " 28 Sexy Girlfriend with big boobs ", thumbnail: "28.jpeg", videoUrl: "29.mp4" },
-    { title: " 29 Sexy Girlfriend with big boobs ", thumbnail: "29.jpeg", videoUrl: "30.mp4" },
-    { title: " 30 Sexy Girlfriend with big boobs ", thumbnail: "30.jpeg", videoUrl: "31.mp4" },
-    { title: " 31 Sexy Girlfriend with big boobs ", thumbnail: "31.jpeg", videoUrl: "32.mp4" },
-    { title: " 32 Sexy Girlfriend with big boobs ", thumbnail: "32.jpeg", videoUrl: "33.mp4" },
-    { title: " 33 Sexy Girlfriend with big boobs ", thumbnail: "33.jpeg", videoUrl: "34.mp4" },
-    { title: " 34 Sexy Girlfriend with big boobs ", thumbnail: "34.jpeg", videoUrl: "35.mp4" },
-    { title: " 35 Sexy Girlfriend with big boobs ", thumbnail: "35.jpeg", videoUrl: "36.mp4" },
-    { title: " 36 Sexy Girlfriend with big boobs ", thumbnail: "36.jpeg", videoUrl: "37.mp4" },
-    { title: " 37 Sexy Girlfriend with big boobs ", thumbnail: "37.jpeg", videoUrl: "38.mp4" },
-    { title: " 38 Sexy Girlfriend with big boobs ", thumbnail: "38.jpeg", videoUrl: "39.mp4" },
-    { title: " 39 Sexy Girlfriend with big boobs ", thumbnail: "39.jpeg", videoUrl: "40.mp4" },
-    { title: " 40 Sexy Girlfriend with big boobs ", thumbnail: "40.jpeg", videoUrl: "41.mp4" },
-    { title: " 41 Sexy Girlfriend with big boobs ", thumbnail: "41.jpeg", videoUrl: "42.mp4" },
-    { title: " 42 Sexy Girlfriend with big boobs ", thumbnail: "42.jpeg", videoUrl: "43.mp4" },
-    { title: " 43 Sexy Girlfriend with big boobs ", thumbnail: "43.jpeg", videoUrl: "44.mp4" },
-    { title: " 44 Sexy Girlfriend with big boobs ", thumbnail: "44.jpeg", videoUrl: "45.mp4" },
-    { title: " 45 Sexy Girlfriend with big boobs ", thumbnail: "45.jpeg", videoUrl: "46.mp4" },
-    { title: " 46 Sexy Girlfriend with big boobs ", thumbnail: "46.jpeg", videoUrl: "47.mp4" },
-    { title: " 47 Sexy Girlfriend with big boobs ", thumbnail: "47.jpeg", videoUrl: "48.mp4" },
-    { title: " 48 Sexy Girlfriend with big boobs ", thumbnail: "48.jpeg", videoUrl: "49.mp4" },
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+  <link rel="icon" href="IVM.png">
+<title>INSTA VIRAL MMS</title>
+<!-- seo for web  -->
+  <meta name="description" content=" indias best viral mms webiste, x video , viral mms , influncer mss , Indian Acctress MMS , Viral mms 2025 , New X video , Indian Village girl MMS, comatozze new Video , comatozze new x Video ,5028xvideo , Gungungupta viral mms , daver bhabhi x video , porn video , new porn video , Best mms website of india " />
 
-];
+  <link rel="canonical" href="https://viralmms.github.io/Instagram-viral/Index.html" />
 
-let shownCount = 8;
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="indias best viral mms webiste, x video , viral mms , influncer mss , Indian Acctress MMS , Viral mms 2025 , New X video , Indian Village girl MMS, comatozze new Video , comatozze new x Video ,5028xvideo , Gungungupta viral mms , daver bhabhi x video , porn video , new porn video , Best mms website of india" />
 
-window.onload = function () {
-    loadVideos();
-};
+  <meta property="og:description" content="indias best viral mms webiste, x video , viral mms , influncer mss , Indian Acctress MMS , Viral mms 2025 , New X video , Indian Village girl MMS, comatozze new Video , comatozze new x Video ,5028xvideo , Gungungupta viral mms , daver bhabhi x video , porn video , new porn video , Best mms website of india" />
 
-function loadVideos() {
-    const grid = document.getElementById("videosGrid");
-    grid.innerHTML = "";
-    demoVideos.slice(0, shownCount).forEach(v => {
-        const videoCard = `
-      <div class="video-card" onclick="playVideo('${v.videoUrl}')">
-        <img src="${v.thumbnail}" alt="${v.title}" class="thumbnail">
-        <div class="video-info">
-          <div class="video-title">${v.title}</div>
-          <div class="video-meta"> <b> ❤️ 1M+ 💬 12k 🔁 150k </b> </div>
+  <meta property="og:image" content="indias best viral mms webiste, x video , viral mms , influncer mss , Indian Acctress MMS , Viral mms 2025 , New X video , Indian Village girl MMS, comatozze new Video , comatozze new x Video ,5028xvideo , Gungungupta viral mms , daver bhabhi x video , porn video , new porn video , Best mms website of india" />
+  <meta property="og:url" content="indias best viral mms webiste, x video , viral mms , influncer mss , Indian Acctress MMS , Viral mms 2025 , New X video , Indian Village girl MMS, comatozze new Video , comatozze new x Video ,5028xvideo , Gungungupta viral mms , daver bhabhi x video , porn video , new porn video , Best mms website of india" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="indias best viral mms webiste, x video , viral mms , influncer mss , Indian Acctress MMS , Viral mms 2025 , New X video , Indian Village girl MMS, comatozze new Video , comatozze new x Video ,5028xvideo , Gungungupta viral mms , daver bhabhi x video , porn video , new porn video , Best mms website of india" />
+
+  <meta name="twitter:title" content="indias best viral mms webiste, x video , viral mms , influncer mss , Indian Acctress MMS , Viral mms 2025 , New X video , Indian Village girl MMS, comatozze new Video , comatozze new x Video ,5028xvideo , Gungungupta viral mms , daver bhabhi x video , porn video , new porn video , Best mms website of india" />
+
+  <meta name="twitter:description" content="indias best viral mms webiste, x video , viral mms , influncer mss , Indian Acctress MMS , Viral mms 2025 , New X video , Indian Village girl MMS, comatozze new Video , comatozze new x Video ,5028xvideo , Gungungupta viral mms , daver bhabhi x video , porn video , new porn video , Best mms website of india" />
+  <meta name="twitter:image" content="https://viralmms.github.io/Instagram-viral/Index.html" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://viralmms.github.io/Instagram-viral/Index.html",
+    "@type": "INSTA VIRAL MMS",
+    "name": "INSTA VIRAL MMS",
+    "url": "https://viralmms.github.io/Instagram-viral/Index.html",
+    "logo": "https://www.example.com/images/logo.png",
+    "sameAs": [
+      "https://viralmms.github.io/Instagram-viral/Index.html",
+      "https://viralmms.github.io/Instagram-viral/Index.html",
+      "https://viralmms.github.io/Instagram-viral/Index.html"
+    ]
+  }
+  </script>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XWKWQ0Q5CN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XWKWQ0Q5CN');
+</script>
+
+</head>
+<body>
+<div class="container">
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <div class="logo-icon"></div>
+      <span><h4 align="center">Instagram Viral MMS </h4></span>
+    </div>
+  </div>
+    <a href="https://duadawai.com/men-wellness" >
+        <h4 align="center" style="color: white; text-decoration: none;"> 🍆💪लिंग का आकार बढ़ाएँ|| CLICK HERE 🔥💦 </h4>
+        <h4 align="center" style="color: white; text-decoration: none;"> 🍆💪 सेक्स टाइमिंग बढ़ाएँ|| CLICK HERE 🔥💦 </h4>
+  <!-- <div class="add"><video src="19.mp4" alt=""  autoplay loop muted playsinline  style="width: 100%; "></video> -->
+  <!-- <p  align="center" class="blink">⚡ Timing kre 30 minutes Ling K i Full Power ⚡</p> -->
+   
+   
+<style> .blink {
+       width: 100%;
+      color: red;
+      font-size: 35px;
+      font-weight: bold;
+      animation: blinkText 1s infinite; /* 1 second ke interval pe blink karega */
+    }
+
+    @keyframes blinkText {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }</style>
+    <video src="adv.mp4" alt="" autoplay loop muted playsinline  style="width: 100%; "></video> </a>
+  </div>
+<hr size="5px white" style="margin-bottom: 20px;">
+  <!-- Video Player -->
+  <div class="video-player" id="videoPlayer">
+    <iframe id="mainVideo" allowfullscreen></iframe>
+  </div>
+
+  <!-- Videos Grid -->
+  <div class="videos-grid" id="videosGrid"></div>
+
+  <!-- Show More Button -->
+  <div class="show-more" id="showMoreContainer">
+    <button onclick="showMore()">Show More</button>
+  </div>
+</div>
+ 
+  <div id="adPopup" class="ad-popup-overlay" style="display: none; text-decoration: none;">
+        <div class="ad-popup">
+         <a href="https://duadawai.com/men-wellness" > <video src="19.mp4"  autoplay loop muted playsinline style="width: 100%;"></video>
+            <!-- <h2>Special Offer!</h2>
+            <div class="ad-images">
+                <img src="image/12.jpeg" alt="Special Offer 1" class="ad-image">
+                
+            <p><span class="he">Lund </span>ko mota or Tagda kre</span> <br>
+            Apne Sex Timing ko kre 30 minutes se jyda </p> --></a>
+            <button class="close-btn" onclick="closeAd()">Close</button>
         </div>
-      </div>`;
-        grid.innerHTML += videoCard;
-    });
+    </div>
+    
 
-    // Hide button if all shown
-    if (shownCount >= demoVideos.length) {
-        document.getElementById("showMoreContainer").style.display = "none";
-    }
-}
 
-function showMore() {
-    shownCount = demoVideos.length;
-    loadVideos();
-}
 
-function playVideo(videoUrl) {
-    const player = document.getElementById("videoPlayer");
-    const iframe = document.getElementById("mainVideo");
-    iframe.src = videoUrl;
-    player.style.display = "block";
-    player.scrollIntoView({ behavior: "smooth" });
-}
+    
 
-// JavaScript to control the ad popup
-document.addEventListener('DOMContentLoaded', function () {
-    // Show the ad popup after a short delay (simulating website load)
-    setTimeout(function () {
-        document.getElementById('adPopup').style.display = 'flex';
-    }, 1000);
-});
+<a href="https://duadawai.com/men-wellness"> <div class="mobile-footer"><video src="13.mp4"  autoplay loop muted playsinline style="width:100%">
+</video>
+  
+</div></a>
+<script src="java.js"></script>
+</body>
+</html>
 
-function closeAd() {
-    document.getElementById('adPopup').style.display = 'none';
-}
 
-// Close the ad when clicking outside of it
-document.getElementById('adPopup').addEventListener('click', function (e) {
-    if (e.target === this) {
-        closeAd();
-    }
-});
 
-// Prevent right-click context menu on images
-document.addEventListener('contextmenu', function (e) {
-    if (e.target.classList.contains('ad-image')) {
-        e.preventDefault();
-    }
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
